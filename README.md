@@ -50,8 +50,7 @@ git clone https://github.com/anncwb/vue-vben-admin.git
 ```bash
 cd vue-vben-admin
 git checkout thin
-pnpm install
-
+pnpm install --registry https://registry.npmmirror.com
 ```
 
 - 运行
