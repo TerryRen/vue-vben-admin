@@ -153,6 +153,12 @@ export default {
   setup: {
     page: 'Intro page',
   },
+  iframe: {
+    frame: 'Extern Page',
+    antv: 'AntVue Doc (Inner)',
+    doc: 'Project Doc (Inner)',
+    docExternal: 'Project Doc (Link)',
+  },
   system: {
     moduleName: 'System management',
 

@@ -10,7 +10,6 @@ const dashboardRoute = {
   redirect: '/dashboard/analysis',
   meta: {
     title: 'routes.dashboard.dashboard',
-    hideChildrenInMenu: true,
     icon: 'bx:bx-home',
   },
   children: [
@@ -19,10 +18,8 @@ const dashboardRoute = {
       name: 'Analysis',
       component: '/dashboard/analysis/index',
       meta: {
-        hideMenu: true,
-        hideBreadcrumb: true,
+        hideMenu: false,
         title: 'routes.dashboard.analysis',
-        currentActiveMenu: '/dashboard',
         icon: 'bx:bx-home',
       },
     },
@@ -31,10 +28,8 @@ const dashboardRoute = {
       name: 'Workbench',
       component: '/dashboard/workbench/index',
       meta: {
-        hideMenu: true,
-        hideBreadcrumb: true,
+        hideMenu: false,
         title: 'routes.dashboard.workbench',
-        currentActiveMenu: '/dashboard',
         icon: 'bx:bx-home',
       },
     },
@@ -54,6 +49,7 @@ const backRoute = {
       name: 'BackAuthPage',
       component: '/demo/permission/back/index',
       meta: {
+        icon: 'bx:buoy',
         title: 'routes.demo.permission.backPage',
       },
     },
@@ -84,17 +80,16 @@ const levelRoute = {
   path: '/level',
   name: 'Level',
   component: 'LAYOUT',
-  redirect: '/level/menu1/menu1-1',
   meta: {
     icon: 'carbon:user-role',
     title: 'routes.demo.level.level',
   },
-
   children: [
     {
       path: 'menu1',
       name: 'Menu1Demo',
       meta: {
+        icon: 'ic:round-home',
         title: 'Menu1',
       },
       children: [
@@ -103,6 +98,7 @@ const levelRoute = {
           name: 'Menu11Demo',
           meta: {
             title: 'Menu1-1',
+            hideMenu: true,
           },
           children: [
             {
@@ -118,9 +114,9 @@ const levelRoute = {
         {
           path: 'menu1-2',
           name: 'Menu12Demo',
-          component: '/demo/level/Menu12',
+          component: '/demo/icon/ChooseIcon',
           meta: {
-            title: 'Menu1-2',
+            title: 'Menu1-2-图标选择器',
           },
         },
       ],
@@ -162,7 +158,6 @@ const sysRoute = {
         hideMenu: true,
         title: 'routes.demo.system.account_detail',
         ignoreKeepAlive: true,
-        showMenu: false,
         currentActiveMenu: '/system/account',
       },
       component: '/demo/system/account/AccountDetail',
